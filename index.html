@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>灰风 · mythos.loc.cc</title>
+<link rel="icon" href="/photo.jpg">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #07090f; overflow: hidden; }
+  .bg {
+    position: fixed; inset: -40px;
+    background: url('/photo.jpg') center / cover no-repeat;
+    filter: blur(36px) brightness(0.45) saturate(1.1);
+  }
+  .photo {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .photo img {
+    max-width: 100vw; max-height: 100vh;
+    width: auto; height: 100vh;
+    object-fit: contain;
+    box-shadow: 0 0 80px rgba(0,0,0,0.55);
+  }
+  @media (max-aspect-ratio: 1/1) {
+    .photo img { width: 100vw; height: auto; }
+  }
+  .caption {
+    position: fixed; left: 0; right: 0; bottom: 22px;
+    text-align: center;
+    font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+    letter-spacing: 0.35em;
+    font-size: 15px;
+    user-select: none;
+  }
+  .caption small {
+    display: block; margin-top: 6px;
+    font-size: 11px; letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.45);
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="photo"><img src="/photo.jpg" alt="灰风"></div>
+  <div class="caption">灰 风<small>MYTHOS.LOC.CC</small></div>
+</body>
+</html>
